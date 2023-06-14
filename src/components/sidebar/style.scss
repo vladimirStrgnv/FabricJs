@@ -4,3 +4,73 @@
     border-right: 1px solid #353948;
 
 }
+
+.sidebar__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar__btn-wrapper {
+    padding: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar__add-rectangle-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/rectangle.svg');
+    background-size: cover;
+
+}
+
+.sidebar__add-circle-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/circle.svg') ;
+    background-size: cover;
+}
+
+.sidebar__add-trinagle-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/trinagle.svg') ;
+    background-size: cover;
+}
+
+.sidebar__add-text-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/text.svg') ;
+    background-size: cover;
+}
+
+.sidebar__add-img-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/img.svg') ;
+    background-size: cover;
+}
+
+.sidebar__img-form {
+    top: 10px;
+    left: 60px;
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+}
+
+.sidebar__img-form-input {
+    width: 100px;
+    height: 20px;
+}
+
+.sidebar__img-form-btn {
+    font-size: 13px;
+    border: 1px solid blue;
+    height: 20px;
+    width: 30px;
+}

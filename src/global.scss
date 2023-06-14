@@ -37,7 +37,6 @@ body {
 
 
 input,
-button,
 textarea,
 select {
   font: inherit;
@@ -46,3 +45,12 @@ select {
 body {
     background-color: rgb(85, 85, 81);
 }
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
