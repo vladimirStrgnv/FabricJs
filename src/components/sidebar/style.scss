@@ -61,6 +61,8 @@
     z-index: 1000;
     position: absolute;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .sidebar__img-form-input {
@@ -73,4 +75,10 @@
     border: 1px solid blue;
     height: 20px;
     width: 30px;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }

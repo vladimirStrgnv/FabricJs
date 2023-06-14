@@ -1,11 +1,11 @@
 import './styles';
 
-const Header = () => {
+const Header = (props) => {
   return (
         <header className="header">
             <div className="header__container">
                 <div className="header__wrapper">
-                    <button>Get svg code</button>
+                    <button className='header__get-svg-btn' onClick={()=> console.log(props.canvas.toSVG())}>Get svg code</button>
                 </div>
             </div>
         </header>  

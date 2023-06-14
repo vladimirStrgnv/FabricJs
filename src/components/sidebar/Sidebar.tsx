@@ -1,7 +1,10 @@
-
 import './style';
+import { useState } from 'react';
 
 const Sidebar = (props) => {
+    const [isVisible, setVisible] = useState(false);
+
+
     return (
         <div className="sidebar">
             <div className="sidebar__btn-wrapper">
@@ -18,8 +21,14 @@ const Sidebar = (props) => {
                 <button className="sidebar__add-text-btn" onClick={() => props.addText(props.canvas)} onContextMenu={(e) => e.preventDefault()}></button>
             </div>
             <div className="sidebar__btn-wrapper">
-                <button className="sidebar__add-img-btn" onClick={() => props.addText(props.canvas)} onContextMenu={(e) => e.preventDefault()}></button>
-                <form className="sidebar__img-form" onSubmit={(e) => props.addImg(e, props.imgURL, props.canvas)}>
+                <button 
+                    className="sidebar__add-img-btn" 
+                    onClick={(e) => { e.preventDefault(); setVisible(!isVisible) }}
+                ></button>
+                <form 
+                    className= {isVisible?"sidebar__img-form visible": "sidebar__img-form"}
+                    onSubmit={(e) => props.addImg(e, props.imgURL, props.canvas)}
+                >
                         <input className="sidebar__img-form-input"
                             placeholder='url картинки'
                             type="text"
