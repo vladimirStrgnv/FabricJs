@@ -10,8 +10,8 @@ const App = () => {
 
   const initCanvas = () => {
     const canvas = new fabric.Canvas("canvas", {
-      height: 842,
-      width: 1345,
+      height: 766,
+      width: 1330,
       backgroundColor: "white",
     });
 

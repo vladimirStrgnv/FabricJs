@@ -1,18 +1,20 @@
 .sidebar {
-    width: 55px;
+    width: 70px;
     min-height: 100%;
     border-right: 1px solid #353948;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.sidebar__wrapper {
+.sidebar__tools-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .sidebar__btn-wrapper {
-    padding: 5px;
+    padding: 10px 5px;
     position: relative;
     display: flex;
     align-items: center;
@@ -81,4 +83,26 @@
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
+}
+
+.sidebar__history-controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+}
+
+.sidebar__undo-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/left-arrow.svg') ;
+    background-size: cover;
+
+}
+
+.sidebar__redo-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/right-arrow.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
