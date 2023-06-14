@@ -1,7 +1,15 @@
+import './global';
+import WorkArea from "./components/work-area/WorkArea"
+import Header from "./components/header/Header"
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Header></Header>
+      <WorkArea></WorkArea>
+      <Footer></Footer>
+    </>
   )
 }
 
