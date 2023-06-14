@@ -7,9 +7,10 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [canvas, setCanvas] = useState("");
+
   const initCanvas = () => {
     const canvas = new fabric.Canvas("canvas", {
-      height: 852,
+      height: 842,
       width: 1345,
       backgroundColor: "white",
     });
@@ -34,7 +35,7 @@ const App = () => {
 
   return (
     <>
-      <Header  canvas={canvas}></Header>
+      <Header  canvas={canvas} ></Header>
       <WorkArea canvas={canvas}></WorkArea>
       <Footer></Footer>
     </>
