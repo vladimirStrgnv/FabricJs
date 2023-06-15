@@ -2,52 +2,25 @@ import './global';
 import WorkArea from "./components/work-area/WorkArea";
 import Header from "./components/header/Header";
 import Footer from './components/footer/Footer';
-import { fabric } from "fabric";
 import { useState, useEffect } from "react";
+import { initCanvasBoard } from './fabric-js';
 import 'fabric-history';
+import { Canvas } from 'fabric/fabric-impl';
 
 const App = () => {
-  const [canvas, setCanvas] = useState('');
-
-  const initCanvas = () => {
-    const canvas = new fabric.Canvas("canvas", {
-      
-      height: Math.ceil(window.innerHeight/100)*85.3,
-      width: Math.ceil(window.innerWidth/100)*66.47,
-      backgroundColor: "white",
-    });
-
-    canvas.on('mouse:wheel', function (opt) {
-      var delta = opt.e.deltaY;
-      var zoom = canvas.getZoom();
-      zoom *= 0.999 ** delta;
-      if (zoom > 20) zoom = 20;
-      if (zoom < 0.01) zoom = 0.01;
-      canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
-      opt.e.preventDefault();
-      opt.e.stopPropagation();
-    });
-    canvas.on('object:added',function(){
- 
-      
-    });
-
-    return canvas;
-  }
-
-
+  const [canvas, setCanvas] = useState<null | fabric.Canvas>(null);
 
   useEffect(() => {
-    setCanvas(initCanvas());
+    setCanvas(initCanvasBoard());
   }, []);
 
   return (
     <>
       <Header  canvas={canvas} ></Header>
-      <WorkArea canvas={canvas}  ></WorkArea>
+      <WorkArea canvas={canvas} ></WorkArea>
       <Footer></Footer>
     </>
   )
 }
 
-export default App
+export default App;

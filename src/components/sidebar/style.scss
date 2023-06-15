@@ -1,3 +1,12 @@
+@mixin sidebar-btn {
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:hover {
+        transition: 0.5s;
+        filter: brightness(0) invert(1);
+    }
+}
+
 .sidebar {
     width: 5%;
     min-width: 70px;
@@ -26,46 +35,48 @@
     width: 30px;
     height: 30px;
     background-image: url('../../assets/rectangle.svg');
-    background-size: cover;
-
+    @include  sidebar-btn;
 }
 
 .sidebar__add-circle-btn {
     width: 30px;
     height: 30px;
     background-image: url('../../assets/circle.svg') ;
-    background-size: cover;
+    @include  sidebar-btn;
 }
 
 .sidebar__add-trinagle-btn {
     width: 30px;
     height: 30px;
     background-image: url('../../assets/trinagle.svg') ;
-    background-size: cover;
+    @include  sidebar-btn;
 }
 
 .sidebar__add-text-btn {
     width: 30px;
     height: 30px;
-    background-image: url('../../assets/text.svg') ;
-    background-size: cover;
+    background-image: url('../../assets/text.svg');
+    @include  sidebar-btn;
 }
 
 .sidebar__add-img-btn {
     width: 30px;
     height: 30px;
     background-image: url('../../assets/img.svg') ;
-    background-size: cover;
+    @include  sidebar-btn;
 }
 
 .sidebar__img-form {
-    top: 10px;
+    width: 135px;
+    top: 15px;
     left: 60px;
-    z-index: 1000;
     position: absolute;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     visibility: hidden;
     opacity: 0;
+    z-index: 1000;
 }
 
 .sidebar__img-form-input {
@@ -75,9 +86,10 @@
 
 .sidebar__img-form-btn {
     font-size: 13px;
-    border: 1px solid blue;
+    border: 1px solid rgb(61, 61, 92);
     height: 20px;
     width: 30px;
+    border-radius: 10px;
 }
 
 .visible {
@@ -89,21 +101,26 @@
 .sidebar__history-controls-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 15px 5px;
+    padding: 15px 7px;
 }
 
 .sidebar__undo-btn {
     width: 20px;
     height: 20px;
     background-image: url('../../assets/left-arrow.svg') ;
-    background-size: cover;
-
+    @include  sidebar-btn;
 }
 
 .sidebar__redo-btn {
     width: 20px;
     height: 20px;
     background-image: url('../../assets/right-arrow.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include  sidebar-btn;
+}
+
+.sidebar__add-line-btn {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/line.png') ;
+    @include  sidebar-btn;
 }

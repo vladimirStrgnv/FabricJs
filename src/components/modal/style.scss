@@ -10,18 +10,33 @@
     position: fixed;
     transform: scale(0);
     z-index: 1000;
+
+    &__content {
+        max-width: 500px;
+        max-height: 500px;
+        padding: 40px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    &__btn {
+        width: 150px;
+        height: 30px;
+        margin-bottom:30px;
+        border-radius: 20px;
+        background-color: rgb(165, 78, 177);
+        color: white;
+        &:hover {
+            transition: 0.5s;
+            color: rgb(207, 226, 37);
+            background-color: rgb(159, 100, 167);
+        }
+    }
 }
 
-.modal__content {
-    max-width: 500px;
-    max-height: 500px;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-}
 
 .modal.active {
     transform: scale(1);
