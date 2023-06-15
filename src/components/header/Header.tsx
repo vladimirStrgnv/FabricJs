@@ -10,7 +10,7 @@ const Header = (props) => {
     <>
       <header className="header">
         <div className="header__container">
-          <div className="header__wrapper">
+          <div className="header__inner">
             <button
               className="header__get-svg-btn"
               onClick={() => {setModalActive(!modalActive); setSvgCode(props.canvas.toSVG())}}

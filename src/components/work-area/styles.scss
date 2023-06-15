@@ -1,12 +1,19 @@
+.work-area {
+    width: 100%;
+}
+
 .work-area__container {
     max-width: 1400px;
+    width: 90%;
     height: 90vh;
     margin: 0 auto;
     background-color: #242631;
     border-bottom: 1px solid #353948;
 }
 
-.work-area__wrapper {
+.work-area__inner {
+    overflow: hidden;
     display: flex;
     height: 100%;
+    width: 100%;
 }

@@ -4,14 +4,16 @@ import Header from "./components/header/Header";
 import Footer from './components/footer/Footer';
 import { fabric } from "fabric";
 import { useState, useEffect } from "react";
+import 'fabric-history';
 
 const App = () => {
-  const [canvas, setCanvas] = useState("");
+  const [canvas, setCanvas] = useState('');
 
   const initCanvas = () => {
     const canvas = new fabric.Canvas("canvas", {
-      height: 766,
-      width: 1330,
+      
+      height: Math.ceil(window.innerHeight/100)*85.3,
+      width: Math.ceil(window.innerWidth/100)*66.47,
       backgroundColor: "white",
     });
 
@@ -25,9 +27,15 @@ const App = () => {
       opt.e.preventDefault();
       opt.e.stopPropagation();
     });
+    canvas.on('object:added',function(){
+ 
+      
+    });
 
     return canvas;
   }
+
+
 
   useEffect(() => {
     setCanvas(initCanvas());
@@ -36,7 +44,7 @@ const App = () => {
   return (
     <>
       <Header  canvas={canvas} ></Header>
-      <WorkArea canvas={canvas}></WorkArea>
+      <WorkArea canvas={canvas}  ></WorkArea>
       <Footer></Footer>
     </>
   )

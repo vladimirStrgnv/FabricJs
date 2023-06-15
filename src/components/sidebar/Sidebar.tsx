@@ -1,6 +1,7 @@
 import './style';
 import { useState } from 'react';
 
+
 const Sidebar = (props) => {
     const [isVisible, setVisible] = useState(false);
 
@@ -41,8 +42,8 @@ const Sidebar = (props) => {
                 </div>
              </div>
              <div className='sidebar__history-controls-wrapper'>
-                <button className='sidebar__undo-btn'></button>
-                <button className='sidebar__redo-btn'></button>
+                <button className='sidebar__undo-btn' onClick={()=> props.canvas.undo()}></button>
+                <button className='sidebar__redo-btn' onClick={()=> props.canvas.redo()}></button>
 
              </div>
         </div>

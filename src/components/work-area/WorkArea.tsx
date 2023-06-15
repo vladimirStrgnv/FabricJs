@@ -7,12 +7,13 @@ import { addRect, addCircle, addTriangle, addText, addImg } from './fabricMethod
 
 const WorkArea = (props) => {
     const [imgURL, setImgURL] = useState('');
-    
+
+ 
 
     return (
         <section className="work-area">
             <div className="work-area__container">
-                <div className="work-area__wrapper">
+                <div className="work-area__inner">
                     <Sidebar 
                         canvas={props.canvas} 
                         addRect={addRect} 
@@ -22,8 +23,9 @@ const WorkArea = (props) => {
                         imgURL={imgURL}
                         setImgURL={setImgURL}
                         addImg={addImg}
+                   
                     ></Sidebar>
-                    <CanvasBoard></CanvasBoard>
+                    <CanvasBoard canvas={props.canvas}></CanvasBoard>
                 </div>
             </div>
         </section>)

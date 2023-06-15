@@ -1,4 +1,9 @@
+.header {
+    width: 100%;
+}
+
 .header__container {
+    width: 90%;
     max-width: 1400px;
     height: 5vh;
     margin: 0 auto;
@@ -6,7 +11,7 @@
     border-bottom: 1px solid #353948;
 }
 
-.header__wrapper {
+.header__inner {
     display: flex;
     align-items: center;
     padding: 9px;
