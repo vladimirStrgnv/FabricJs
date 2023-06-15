@@ -24,8 +24,13 @@ const Header = ({canvas}: HeaderProps) => {
           </div>
         </div>
       </header>
-      <Modal active={modalActive} setActive={setModalActive} text={svg} callback={() => {navigator.clipboard.writeText(svg)}}></Modal>
-
+      <Modal 
+        active={modalActive} 
+        setActive={setModalActive} 
+        text={svg} 
+        callback={navigator.clipboard.writeText(svg)} 
+        alert={'svg code has been copied'}
+      ></Modal>
     </>
   );
 };

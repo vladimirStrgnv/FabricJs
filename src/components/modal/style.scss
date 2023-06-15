@@ -22,10 +22,14 @@
         overflow-x: hidden;
     }
 
+    &__btn-wrapper {
+        position: relative;
+        margin-bottom:30px;
+    }
+
     &__btn {
         width: 150px;
         height: 30px;
-        margin-bottom:30px;
         border-radius: 20px;
         background-color: rgb(165, 78, 177);
         color: white;
@@ -34,6 +38,16 @@
             color: rgb(207, 226, 37);
             background-color: rgb(159, 100, 167);
         }
+    }
+
+    &__btn-alert {
+        position: absolute;
+        width: 200px;
+        left:50%;
+        right:50%;
+        color: red;
+        font-weight: 700;
+        transform: translate(-50%, 0%);
     }
 }
 
