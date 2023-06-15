@@ -15,82 +15,111 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &__tools-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__btn-wrapper {
+        padding: 10px 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__add-rectangle-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/rectangle.svg');
+        @include  sidebar-btn;
+    }
+
+    &__add-circle-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/circle.svg') ;
+        @include  sidebar-btn;
+    } 
+
+    &__add-trinagle-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/trinagle.svg') ;
+        @include  sidebar-btn;
+    }
+
+    &__add-text-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/text.svg');
+        @include  sidebar-btn;
+    } 
+
+    &__add-img-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/img.svg') ;
+        @include  sidebar-btn;
+    } 
+
+    &__img-form {
+        width: 135px;
+        top: 15px;
+        left: 60px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1000;
+    }
+
+    &__img-form-input {
+        width: 100px;
+        height: 20px;
+    } 
+
+    &__img-form-btn {
+        font-size: 13px;
+        border: 1px solid rgb(61, 61, 92);
+        height: 20px;
+        width: 30px;
+        border-radius: 10px;
+    } 
+
+    &__history-controls-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 7px;
+    }
+
+    &__undo-btn {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../assets/left-arrow.svg') ;
+        @include  sidebar-btn;
+    }
+
+    &__redo-btn {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../assets/right-arrow.svg');
+        @include  sidebar-btn;
+    }
+
+    &__add-line-btn {
+        width: 30px;
+        height: 30px;
+        background-image: url('../../assets/line.png') ;
+        @include  sidebar-btn;
+    }
+
 }
 
-.sidebar__tools-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebar__btn-wrapper {
-    padding: 10px 5px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar__add-rectangle-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/rectangle.svg');
-    @include  sidebar-btn;
-}
-
-.sidebar__add-circle-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/circle.svg') ;
-    @include  sidebar-btn;
-}
-
-.sidebar__add-trinagle-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/trinagle.svg') ;
-    @include  sidebar-btn;
-}
-
-.sidebar__add-text-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/text.svg');
-    @include  sidebar-btn;
-}
-
-.sidebar__add-img-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/img.svg') ;
-    @include  sidebar-btn;
-}
-
-.sidebar__img-form {
-    width: 135px;
-    top: 15px;
-    left: 60px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1000;
-}
-
-.sidebar__img-form-input {
-    width: 100px;
-    height: 20px;
-}
-
-.sidebar__img-form-btn {
-    font-size: 13px;
-    border: 1px solid rgb(61, 61, 92);
-    height: 20px;
-    width: 30px;
-    border-radius: 10px;
-}
 
 .visible {
     visibility: visible;
@@ -98,29 +127,3 @@
     transition: 0.5s;
 }
 
-.sidebar__history-controls-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 7px;
-}
-
-.sidebar__undo-btn {
-    width: 20px;
-    height: 20px;
-    background-image: url('../../assets/left-arrow.svg') ;
-    @include  sidebar-btn;
-}
-
-.sidebar__redo-btn {
-    width: 20px;
-    height: 20px;
-    background-image: url('../../assets/right-arrow.svg');
-    @include  sidebar-btn;
-}
-
-.sidebar__add-line-btn {
-    width: 30px;
-    height: 30px;
-    background-image: url('../../assets/line.png') ;
-    @include  sidebar-btn;
-}

@@ -1,29 +1,31 @@
 .header {
     width: 100%;
-}
 
-.header__container {
-    width: 90%;
-    max-width: 1400px;
-    height: 5vh;
-    margin: 0 auto;
-    background-color: #242631;
-    border-bottom: 1px solid #353948;
-}
+    &__container {
+        width: 90%;
+        max-width: 1400px;
+        height: 5vh;
+        margin: 0 auto;
+        background-color: #242631;
+        border-bottom: 1px solid #353948;
+    }
 
-.header__inner {
-    display: flex;
-    align-items: center;
-    padding: 9px;
-}
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 9px;
+    }
 
-.header__get-svg-btn {
-    width: 100px;
-    background-color: aliceblue;
-    border-radius: 20px;
-    height: 30px;
-    &:hover {
-        background-color: #978831;
-        transition: 0.5s;
+    &__get-svg-btn {
+        width: 100px;
+        background-color: aliceblue;
+        border-radius: 20px;
+        height: 30px;
+        &:hover {
+            background-color: #978831;
+            transition: 0.5s;
+        }
     }
 }
+
+
